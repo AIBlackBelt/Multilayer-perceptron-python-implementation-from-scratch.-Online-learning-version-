@@ -1,7 +1,7 @@
 from Perceptron import Perceptron
 from Layer import Layer
 from Multilayerperceptron import Multilayerperceptron
-
+import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import read_csv
 import random
@@ -81,6 +81,7 @@ for i in range(0,len(predictive_variables)):
     y = Multilayer_perceptron.forward_pass(predictive_variables.iloc[i].tolist())
     S = S + (y[0]-predicted_variable.iloc[i].tolist()[0])**2
 #This program returns the value of the loss function (Average of Squared errors) at the end of the learning process, 
+
 print(S/len(predictive_variables))
 
 
