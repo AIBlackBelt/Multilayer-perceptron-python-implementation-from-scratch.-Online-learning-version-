@@ -1,6 +1,6 @@
 The data used for simulation was extracted from : 
 https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise
-Before we dig into explanation we would like to clarify some notations :
+Before we dig into explanationn we would like to clarify some notations :
 Wij is the weight between input node 𝑖 in the input layer and the hidden node 𝑗 in the hidden layer.
 Yj is the neuron ouput indexed by j.
 Xi is the ith element of the feature vector. 
@@ -16,11 +16,11 @@ Loss function : L = (sumi=1->n (Y(predicted) - Y(true value))*(Y(predicted) - Y(
 2) Learning type : Online learning ( weight are constantly updated after each forward pass )
 
 
-3) 
+3) algorithm 
 1. Initialize all weights to small random values.
 2. Standardize training data.
 3. For each input:
- . Calculate the output (forward);
+ . Calculate the output (forward pass);
  . Update the weights by backpropagating using the follow role:
    Wij = Wij + Learning_rate*(dL/dWjk)
 
@@ -31,6 +31,8 @@ Loss function : L = (sumi=1->n (Y(predicted) - Y(true value))*(Y(predicted) - Y(
 
 The folder "Data" contains all the training data (trainingset.csv) and test data (testset.csv),the data was scaled for both configs. The target variable for both training and testing sets (trainingpredictedvariable.csv) and (testpredictedvariable.csv) are stored seperately in another file. The "airfoil_self_noise.csv" shows the raw form of data, "processed_data.csv" shows the scaled data, the rest of the file presents a subset of data (training and testing). 
 
-The implementation is done from scratch, therefore you will need to rebuild everything or just adapt it to your specific task. You need to have a clear understanding of Feed-Forward neural networks, because you will need to handle everything manually. you will need to handle everything manually, therefore a clear understanding of Feed-Forward neural networks is required in order to avoid concept-related mistakes.
+The implementation is done from scratch, therefore you will need to rebuild everything or just adapt it to your specific task. You will need to handle everything manually, therefore a clear understanding of Feed-Forward neural networks is required in order to avoid concept-related mistakes.
+
+
 
 run the file init.py, the program will come up with the empirical error after the learning process, don't hesitate to control the epoch parameter, and learning rate.
